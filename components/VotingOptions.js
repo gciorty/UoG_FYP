@@ -43,7 +43,7 @@ export default class VotingOptions extends Component {
   addVotingOptionHandler = async (event) => {
     event.preventDefault();
     const election = Election(this.props.ID); //get instance of the the election
-    this.setState({ errorMSg: "", loading: true });
+    this.setState({ errorMsg: "", loading: true });
     try {
       const accounts = await web3.eth.getAccounts();
       await election.methods

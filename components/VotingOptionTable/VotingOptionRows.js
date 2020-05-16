@@ -12,7 +12,9 @@ class ElectionStateRow extends Component {
     try {
       const accounts = await web3.eth.getAccounts();
       const election = Election(electionAddress);
-      await election.methods.enableVotingOption(id).send({ from: accounts[0] });
+      await election.methods
+        .enableVotingOption(id - 1)
+        .send({ from: accounts[0] });
       this.setState({ loading: false });
       refresh();
     } catch (err) {
@@ -26,7 +28,7 @@ class ElectionStateRow extends Component {
       const accounts = await web3.eth.getAccounts();
       const election = Election(electionAddress);
       await election.methods
-        .disableVotingOption(id)
+        .disableVotingOption(id - 1)
         .send({ from: accounts[0] });
       this.setState({ loading: false });
       refresh();

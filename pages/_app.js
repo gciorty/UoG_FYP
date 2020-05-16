@@ -1,3 +1,7 @@
+// This is the file that every page in the application includes
+// It is essential for operations which require to handle authentication
+// the componentDidMount function check if the page is authenticated as admin, voting station or not authenticated at all
+
 import "semantic-ui-css/semantic.min.css";
 import React from "react";
 import { Container } from "semantic-ui-react";
