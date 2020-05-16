@@ -21,5 +21,6 @@ Steps to run the application:
 3. run the command: npm install (from terminal inside on the root folder of the projecy)
 4. run the command: npm run compile
 5. run the command: npm run deploy -> this will return an address of the election
-6. run the command: npm run dev (compiles the application in development mode)
-7. Browse to localhost:3000
+6. Locale /ethereum/factory.js and on line 8 update the address of the factory election with the one received on step 5
+7. run the command: npm run dev (compiles the application in development mode)
+8. Browse to localhost:3000
