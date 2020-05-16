@@ -27,6 +27,17 @@ const deploy = async () => {
     .send({ from: accounts[0], gas: "2000000" });
 
   console.log("Factory contract deployed to", result.options.address);
+
+  const instance = new web3.eth.Contract(
+    JSON.parse(compiledFactory.interface),
+    result.options.address
+  );
+
+  console.log("Adding Administrator...");
+  await instance.methods
+    .addAdmin(accounts[0])
+    .send({ from: accounts[0], gas: "250000" });
+
   addressJSONfile.factoryAddress = result.options.address;
   fs.writeFile(
     "./config/default.json",

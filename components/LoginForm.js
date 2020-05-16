@@ -27,6 +27,7 @@ const LoginForm = (props) => {
       );
       signChallenge(res.data);
     } catch (err) {
+      console.log(err.response);
       alert(
         "Please open Metamask and login with an election admin account - " + err
       );

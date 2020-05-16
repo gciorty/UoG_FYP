@@ -17,7 +17,7 @@ module.exports = async (req, res, next) => {
     const pubAddress = req.params.MetaAddress;
     const instance = new web3.eth.Contract(
       JSON.parse(compiledFactory.interface),
-      "0xd505965Aea57adfD7C5CBb65E54d8b9DD818F793"
+      config.get("factoryAddress")
     );
 
     const admin = await instance.methods.admins(pubAddress).call();
