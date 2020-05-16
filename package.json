@@ -1,0 +1,51 @@
+{
+  "name": "election-blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "compile": "node ethereum/compile.js",
+    "deploy": "node ethereum/deploy.js",
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start",
+    "test": "mocha --timeout 60000000 --slow 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gciorty/election-blockchain.git"
+  },
+  "author": "Gabriel Ciortea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gciorty/election-blockchain/issues"
+  },
+  "homepage": "https://github.com/gciorty/election-blockchain#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "config": "^3.3.1",
+    "cors": "^2.8.5",
+    "cryptr": "^6.0.2",
+    "ethereum-input-data-decoder": "^0.3.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
+    "meta-auth": "^1.1.2",
+    "mocha": "^7.1.2",
+    "mysql": "^2.18.1",
+    "next": "latest",
+    "next-cookies": "^2.0.3",
+    "random-name": "^0.1.2",
+    "react": "^16.13.1",
+    "react-cookie": "^4.0.3",
+    "react-dom": "^16.13.1",
+    "react-google-charts": "^3.0.15",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2",
+    "shortid": "^2.2.15",
+    "solc": "^0.4.22",
+    "truffle-hdwallet-provider": "0.0.3",
+    "web3": "^1.2.4"
+  }
+}

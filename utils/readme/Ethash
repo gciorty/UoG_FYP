@@ -1,0 +1,11 @@
+3. to run the PoA:
+
+geth --identity "node1" --syncmode "full" --rpc --rpcport "8100" --rpcaddr "0.0.0.0" --rpccorsdomain "*" --datadir "/home/sysadmin/pow/node1" --port "30333" --nodiscover --rpcapi "db,eth,net,web3,personal,miner,admin" --networkid 1414 --nat "any"  --targetgaslimit 4700000 --allow-insecure-unlock --ethstats node1:Gabriel1@localhost:3000
+
+geth --identity "node2" --syncmode "full" --rpc --rpcport "8101" --rpcaddr "0.0.0.0" --rpccorsdomain "*" --datadir "/home/sysadmin/pow/node2" --port "30334" --nodiscover --rpcapi "db,eth,net,web3,personal,miner,admin" --networkid 1414 --nat "any"  --targetgaslimit 4700000 --allow-insecure-unlock --ethstats node2:Gabriel1@localhost:3000
+
+geth --identity "node3" --syncmode "full" --rpc --rpcport "8102" --rpcaddr "0.0.0.0" --rpccorsdomain "*" --datadir "/home/sysadmin/pow/node3" --port "30335" --nodiscover --rpcapi "db,eth,net,web3,personal,miner,admin" --networkid 1414 --nat "any"  --targetgaslimit 4700000 --allow-insecure-unlock --ethstats node3:Gabriel1@localhost:3000
+
+4. run ethstats
+
+WS_SECRET=Gabriel1 npm start

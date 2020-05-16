@@ -1,0 +1,22 @@
+1. Connect to the VM running the nodes ->
+ssh sysadmin@evote01.westeurope.cloudapp.azure.com
+
+2. There are two folders (PoA and PoW) select the desired blockchain to running
+
+3. to run the PoA:
+
+geth --identity "node1" --syncmode "full" --rpc --rpcport "8100" --rpcaddr "0.0.0.0" --rpccorsdomain "*" --datadir "/home/sysadmin/poa/node1" --port "30333" --nodiscover --rpcapi "db,eth,net,web3,personal,miner,admin" --networkid 1515 --nat "any" --gasprice '1' --targetgaslimit 4700000 --allow-insecure-unlock -unlock '0xc722b49859492d39E4070F86A08fa97D1bb26A8d' --password "/home/sysadmin/poa/node1/password.txt" --mine --ethstats node1:Gabriel1@localhost:3000
+
+geth --identity "node2" --syncmode "full" --rpc --rpcport "8101" --rpcaddr "0.0.0.0" --rpccorsdomain "*" --datadir "/home/sysadmin/poa/node2" --port "30334" --nodiscover --rpcapi "db,eth,net,web3,personal,miner,admin" --networkid 1515 --nat "any" --gasprice '1' --targetgaslimit 4700000 --allow-insecure-unlock -unlock '0x87D4D4e9aec24eaf4cF7fE594Eb937682d84C109' --password "/home/sysadmin/poa/node2/password.txt" --mine --ethstats node2:Gabriel1@localhost:3000
+
+geth --identity "node3" --syncmode "full" --rpc --rpcport "8102" --rpcaddr "0.0.0.0" --rpccorsdomain "*" --datadir "/home/sysadmin/poa/node3" --port "30335" --nodiscover --rpcapi "db,eth,net,web3,personal,miner,admin" --networkid 1515 --nat "any" --gasprice '1' --targetgaslimit 4700000 --allow-insecure-unlock -unlock '0x6B318DF6F1D574ed2083000c64107ce30EEb2ec2' --password "/home/sysadmin/poa/node3/password.txt" --mine --ethstats node3:Gabriel1@localhost:3000
+
+4. run ethstats
+
+WS_SECRET=Gabriel1 npm start
+
+5. connect to all nodes over rpc
+
+geth attach http://51.145.142.154:8100
+geth attach http://51.145.142.154:8101
+geth attach http://51.145.142.154:8102

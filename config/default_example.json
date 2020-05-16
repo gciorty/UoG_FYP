@@ -1,0 +1,16 @@
+{
+  "factoryAddress": "",
+  "jwtSecret": "",
+  "voteSecret": "",
+  "infuraAPI": "",
+  "infuraAPIRopsten": "",
+  "mneumonic": "",
+  "dbConnection": {
+    "connectionLimit": 10,
+    "host": "",
+    "database": "",
+    "user": "",
+    "password": "",
+    "port": 3306
+  }
+}
