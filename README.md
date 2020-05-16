@@ -7,28 +7,12 @@ Prerequesites:
 - Ensure you have Metamask installed on your browser (create an account if you don't have one)
 - If you plan to use an Official networks get yourself a free infuraAPI project -> https://infura.io/
 - Ensure you have Ethers on your accounts
-- Create a default.json file with the following details:
-      {
-        "factoryAddress": "",
-        "jwtSecret": "",
-        "voteSecret": "",
-        "infuraAPI": "",
-        "infuraAPIRopsten": "",
-        "mneumonic": "",
-          "dbConnection": {
-          "connectionLimit": 10,
-          "host": "",
-          "database": "",
-          "user": "",
-          "password": "",
-          "port": 
-        }
-      }
-      Factory is added automnatically from step 4
-      jwt and vote secret is your choice
-      infuraAPI take them from infure
-      and add the mneumonic of your blockchain account
-- On db/connection add your database details
+- Rename config/default_default.json to default.json and add:
+      - Factory is added automnatically from step 4
+      - the secret for the two jwt tokens of your choice
+      - infuraAPI url
+      - add the mneumonic of your blockchain account
+      - On dbConnection add your database details
 
 Steps to run the application:
 
