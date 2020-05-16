@@ -16,11 +16,10 @@ Prerequesites:
 
 Steps to run the application:
 
-1. Git clone the repository on your local machine
+1. Clone the repository on your local machine
 2. Locale the file /ethereum/contract/Election.sol and on line 8 edit the string to your selected Ethereum admin account
 3. run the command: npm install (from terminal inside on the root folder of the projecy)
 4. run the command: npm run compile
 5. run the command: npm run deploy -> this will return an address of the election
-6. Locale the file /ethereum/factory.js and on line 8 edit the address to the one obtained in line 4
-7. run the command: npm run dev (compiles the application in development mode)
-8. Browse to localhost:3000
+6. run the command: npm run dev (compiles the application in development mode)
+7. Browse to localhost:3000
